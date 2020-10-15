@@ -10,7 +10,7 @@ RUN curl -fL -o docker.tgz "https://download.docker.com/linux/static/test/x86_64
     && gpasswd -a jenkins docker
 
 RUN apt update && \
-    apt install -y python-pip && \ 
-    pip install docker-compose
+    apt install -y python3-pip && \ 
+    pip3 install docker-compose
 RUN ["apt-get", "install", "-y", "vim"]
 USER jenkins
